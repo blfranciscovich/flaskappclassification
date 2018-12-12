@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+    	<title>Facebook Post Sentiment</title>
+ 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  	</head>
+	<body class="container">
+		<h1>
+			<div class="center" style="font-family:arial; color:#008080">
+				Find the best Facebook post
+			</div>
+		</h1>
+		<p class="center" style="font-family:arial">
+			Type in your beer-realted post to see if it will be high engaging or low engagaing. Keep going until you find a high engaging post!
+		</p>
+
+		{% from "_formhelpers.html" import render_field %}
+		 <div class="center">
+			<div class="card" style="border-radius: 10px 10px 10px 10px;border: 5px solid #008080">
+				<div class="card-content container black-text">
+					<form method=post action="/analysis">
+						<div class="input-field col s6">
+							<input type="text" class="validate" id="nameText" name="nameText" required="true">
+							<label for="icon_prefix">Your Name</label>
+					 	</div>
+					 	<div class="input-field col s12">
+
+					    	<textarea class="materialize-textarea" id="sentimentTextarea" name="sentimentTextarea" rows="3" required="true"></textarea>
+					    	<label for="sentimentTextarea">Sentiment</label>
+					  	</div>
+					  	<div>
+					  		<button style="color:#008080" type="submit" name="submit_btn">Submit</button>
+					  	</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

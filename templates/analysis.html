@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+    	<title>Flight Predictor</title>
+ 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+	<body class="container">
+		<h1>
+			<div class="center" style="font-family:arial; color:#008080">
+				Find the best Facebook post
+			</div>
+			</h1>
+
+		<div class="center">
+			<div class="card" style="border-radius: 10px 10px 10px 10px;border: 5px solid #008080 padding: 10px">
+
+		    		<h5>Hello {{myname}} Your Facebook post, </h5>
+						<h5>{{content}} is a: </h5>
+		    		{% if category == 0 %}
+		    			<div style="color:white; background-color:red; border-radius: 50px 50px 50px 50px"</div>
+		    		{% endif %}
+		    		{% if category == 1 %}
+		    			<div style="color:white; background-color:green; border-radius: 50px 50px 50px 50px">High engagaing post</div>
+		    		{% endif %}
+		</div>
+
+		<p></p>
+
+		<div id='button'>
+			  <form action="/">
+			   <button button style="color:#008080" type="submit" name="submit_btn">Submit another post</button>
+			  </form>
+		</div>
+
+		<p></p>
+
+	</div>
+
+</div>
+
+	</body>
+</html>
